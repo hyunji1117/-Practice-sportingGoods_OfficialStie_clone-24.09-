@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제브라골프</title>
+</head>
+<body>
+  <div class="viewport">
+    <!-- 해더 -->
+    <div class="header main">
+      <!-- 상단 로그인 -->
+      <div class="tnb_02"> 
+        <div class="width_wrap">
+          <div class="right_tnb">
+            <a href="/login.htm" alt="로그인">                               <!--/login으로 표시하는 방법-->
+              <span class="icon_user"></span>
+              "로그인"
+            </a>
+            <a href="/join.htm" alt="회원가입">
+              <span class="icon_add_user"></span>
+              "회원가입"
+            </a>
+            <a href="/shop_info/sitemap.htm" alt="회원가입">
+              <span class="icon_menu3"></span>
+              "사이트맵"
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- //상단 로그인 -->
+      <!-- 상단 로그 영역 -->
+      <div id="fixed_header" class="logo_wrap_01">
+        <div class="width_wrap">
+          <!-- 로고 간편디자인 -->
+          <h1>
+            <a href="/index.htm">                                         <!--/의 의미는?-->
+              <img src="/img_up/shop_pds/tp690/site_content/logo1231111716275525.png" sytle="vertical-align:middle;border:0;" alt title>
+            </a>
+          </h1>
+          <!-- //로고 간편디자인 -->
+          <!-- pc 메뉴 -->
+          <div class="pc_nav dis_table_desktop">
+            <!-- ***템플릿 호환가능*** (phpx 변수관리 추가 해주세요) -->
+            <style></style>
+            <script></script>
+            <div id="pm_pc_nav_03" class="pm-navigation_horizon_pc_nav_03">
+              <!-- 1 Depth -->
+              <ul class="dep1">
+                <li>
+                  <a href="/page/sub1_1.htm"> 브랜드소개 </a>
+                </li>
+                <li>
+                  <a href="/product/product_list.htm"> 제품소개 </a>
+                </li>
+                <li>
+                  <a href="/my_board/store.htm"> 매장안내 </a>
+                </li>
+                <li>
+                  <a href="/myreg/form1.htm"> 제품문의 </a>
+                </li>
+                <li>
+                  <a href="/bbs/notice.htm"> 공지사항 </a>
+                </li>
+                <!--::after javascript-->
+              </ul>
+              <!-- // 1 Depth -->
+            </div>
+            <script>
+              $(function(){
+                $('#pm_pc_nav_03 [role=toggle] > a').on('click', function(e){
+                  var
+                    $li = $(this).parent()
+                    ,$lis = $(this).closest('ul').children()
+                    ,$active = $(this).parent().parent().children('.active');
+                  if ($(window).innerWidth() < 1100){
+                    if ($li.hasClass('active'))
+                    {
+                      $li.removeClass('active');
+                      //$li.children('div').hide();
+                      $('#pm_pc_nav_03 [role=toggle] > div').attr('style', '')
+                    }
+                    else
+                    {
+                      //$active.children('div').hide();
+                      $('#pm_pc_nav_03 [role=toggle] > div').attr('style', '')
+                      $active.removeClass('active');
+                      $li.addClass('active');
+                      $(this).next().show();
+                    }
+                    return false;
+                  }
+                    //return false;
+                });
+                $( window ).resize(function() {
+                  if($(window).innerWidth() < 768 || $(window).innerWidth() > 1100){
+                    $('#pm_pc_nav_03 [role=toggle]').removeClass('active');
+                    $('#pm_pc_nav_03 [role=toggle] > div').attr('style', '')
+                  }
+                });
+              });
+            </script>
+          </div>
+          <!-- //pc 메뉴 -->
+          <!-- 모바일 메뉴 버튼 -->
+          <a href="javascript:;" class="icon-menu toggleGnb dis_mobile" alt="모바일 메뉴버튼"></a>
+          <!-- //모바일 메뉴 버튼 -->
+          <!-- 모바일 전화 버튼 -->
+          <a href="javascript:;" class="icon-phone m_tel dis_mobile"></a>
+          <!-- //모바일 전화 버튼 -->
+        </div>
+      </div>
+      <!-- //상단 로그 영역 -->
+    </div>
+    <!-- //해더 -->
+    <!-- 메인 영역 -->
+    <div class="container" style="padding-top: 94px;">
+      <div class="spot_pc">
+        <style>
+          .spot_02 {position: relative; overflow:hidden;}
+          .spot_02 .owl-controls {margin:0 !important;}
+          .spot_02 .owl-controls .owl-nav {position: absolute; top: 50%; margin-top: -10px; width: 100%; height: auto;}
+          .spot_02 .owl-controls .owl-nav .owl-prev,
+          .spot_02 .owl-controls .owl-nav .owl-next {
+            overflow: hidden; position: absolute; top: 50%; z-index: 50; width: 40px; height: 40px; margin-top: -10px; cursor: pointer;
+            opacity:.3; box-sizing:border-box; text-align: center;
+            }
+          .spot_02 .owl-controls .owl-nav .owl-prev:hover,
+          .spot_02 .owl-controls .owl-nav .owl-next:hover {opacity:.6;}
+          .spot_02 .owl-controls .owl-nav .owl-prev:before,
+          .spot_02 .owl-controls .owl-nav .owl-next:before {display:none; line-height: 40px; font-family: "icomoon"; font-size: 20px; color: #b1b1b1;}
+          .spot_02 .owl-controls .owl-nav .owl-next {right: 10px;}
+          .spot_02 .owl-controls .owl-nav .owl-next:before {content:"\e923";}
+          .spot_02 .owl-controls .owl-nav .owl-prev {left: 10px;}
+          .spot_02 .owl-controls .owl-nav .owl-prev:before {content:"\e922";}
+          .spot_02 .owl-controls .owl-dots {position:absolute; bottom:5px; width:100%; margin:0 auto;  text-align:center;}
+          .spot_02 .owl-controls .owl-dots .owl-dot {
+            position:relative; display:inline-block; margin:3px; width:13px; height:13px;  transition:all .3s;
+            border-radius:50%; box-sizing:border-box; background:#fff; opacity:.6;
+            }
+          .spot_02 .owl-controls .owl-dots .owl-dot:hover,
+          .spot_02 .owl-controls .owl-dots .owl-dot.active {background:#fff; width:37px; border-radius:15px; opacity:1;}
+
+          .spot_02 .item{position:relative;overflow:hidden;}
+          .spot_02 .caption_wrap{position:absolute; top: 50%; left: 50%;transform: translate(-50%,-50%);width:100%;text-align:center;}
+          .spot_02 .caption p{font-size:15px; color:#fff;font-family:'Montserrat', 'Noto Sans', NanumGothic, '나눔고딕', 'Open Sans', sans-serif; font-weight:500; opacity: 0; text-shadow:1px 1px 3px #585858;padding-top:20px;}
+          .spot_02 .caption h1{font-size:30px; color:#fff;font-family:'Montserrat', 'Noto Sans', NanumGothic, '나눔고딕', 'Open Sans', sans-serif; font-weight:600;opacity: 0;  text-shadow:1px 1px 3px #585858;}
+
+          .pc_img {display:none !important;}
+          .mobile_img {display:block !important;}
+          .spot_02 .item img {border:none;transform:scale(1.2);transition:transform 2s .7s ease}
+          .spot_02 .owl-item.active .item img {transform:scale(1)}
+          .spot_02 .owl-item.cloned .item img {transform:scale(1)}
+
+          @media screen and (min-width: 768px) {
+            .pc_img {display:block !important;}
+            .mobile_img {display:none !important;}
+            .spot_02 .owl-controls .owl-nav .owl-prev:before,
+            .spot_02 .owl-controls .owl-nav .owl-next:before {display:inline-block; font-size:30px;}
+            .spot_02 .caption_wrap{text-align:left;}
+            .spot_02 .caption h1{font-size:40px;}
+          }
+
+          @media screen and (min-width: 1100px) {
+            .spot_02 .owl-controls .owl-nav .owl-prev:before,
+            .spot_02 .owl-controls .owl-nav .owl-next:before {font-size:50px;}
+            .spot_02 .caption h1{font-size:52px;}
+            .spot_02 .caption p{font-size:27px;}
+          }
+        </style>
+        <div class="owl-carousel spot_02 owl-theme owl-loaded">
+          <div class="owl-stage-outer" style="padding-left: 0px; padding-right: 0px">
+            <div class="owl-stage" style="width: 4575px; transform: stranslate3d(-1830px, 0px, 0px); transition: all;">
+              <div class="owl-item cloned" style="width: 915px; margin-right: 0px;">
+                <div class="item">
+                  <img src="/img_up/shop_pds/tp690/design/my xml/m31716352630.jpg" class="pc_img">
+                  <img src="/img_up/shop_pds/tp690/design/my xml/m31716352630.jpg" class="mobile_img">
+                  <div class="caption_wrap">
+                    <div class="width_wrap">
+                      <div class="caption">
+                        <h1 class="move2" style="opacity: 1; margin-bottom: 0px;"> ZEBRA IS BACK </h1>
+                      </div>
+                      <!--::after javascript-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script></script>
+      </div>
+      <style></style>
+      <div class="mblock_style_04"></div>
+      <style></style>
+      <div class="mblock_style_06"></div>
+    </div>
+    <!-- //메인 영역 -->
+    <!-- 푸터 -->
+    <!-- //푸터 -->
+  </div>
+</body>
+</html>
